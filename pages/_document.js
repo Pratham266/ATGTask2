@@ -3,7 +3,9 @@ import { Html, Head, Main, NextScript } from 'next/document'
 export default function Document() {
   return (
     <Html lang="en">
-      <Head />
+      <Head >
+      <script src="https://cdn.tailwindcss.com" async></script>
+      </Head>
       <body>
         <Main />
         <NextScript />
