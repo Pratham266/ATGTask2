@@ -6,10 +6,12 @@ export default function Document() {
       <Head >
       <script src="https://cdn.tailwindcss.com" async></script>
       </Head>
-      <body>
+      <div>
+      <body className='bg-[#d1fae5]'>
         <Main />
         <NextScript />
       </body>
+      </div>
     </Html>
   )
 }

@@ -58,7 +58,7 @@ export default function Home() {
       </Head>
         <div className="mx-auto mt-8 grid max-w-4xl grid-cols-12 gap-4 p-1">
           <div className="header flex justify-center items-center col-span-12 rounded-lg  py-8 ">
-<p className="text-2xl font-bold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl dark:text-white">Employee Data <mark className="px-2 text-white bg-blue-600 rounded dark:bg-blue-500">ATG</mark> Task 2</p>
+<p className="text-2xl font-bold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl dark:text-white">EMPLOYEE DATA</p>
 
           </div>
           <div className="col-span-12 rounded-lg  sm:col-span-5">
@@ -69,7 +69,7 @@ export default function Home() {
                   USER LIST
                 </h3>
               </div>
-            <div className="p-4 max-w-md bg-white  shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+            <div className="max-w-md bg-[#a7f3d0]  border-2 border-[#059669] rounded shadow-md sm:p-2 dark:bg-[#064e3b] dark:border-gray-700">
               <div className="flow-root overflow-y-auto h-[30rem]">
                 <ul
                   role="list"
@@ -84,8 +84,8 @@ export default function Home() {
                       
                       {users.map((user) => (
                     <React.Fragment key={cnt++} >
-                      <li className={`py-3 sm:py-4 cursor-pointer ${user.profile.email === selectedEmail ? "bg-blue-200" : ""}`} onClick={() => handleUserProfile(user)}>
-                        <div className="flex items-center space-x-4">
+                      <li className={`pl-2 py-3 sm:py-4 cursor-pointer  ${user.profile.email === selectedEmail ? "bg-[#34d399]" : ""}`} onClick={() => handleUserProfile(user)}>
+                        <div className="flex items-center  space-x-4">
                           <div className="flex-shrink-0">
                             <Image
                               className="rounded-full"
@@ -99,7 +99,7 @@ export default function Home() {
                             <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
                               {user.profile.firstName} {user.profile.lastName}
                             </p>
-                            <p className="text-sm text-gray-500 truncate dark:text-gray-400">
+                            <p className="text-sm text-gray-900 truncate dark:text-gray-400">
                               {user.profile.email}
                             </p>
                           </div>
@@ -118,7 +118,7 @@ export default function Home() {
           </div>
           <div className="col-span-12  sm:col-span-7">
             {/* <!-- Sidebar --> */}
-            <div className="flex justify-center items-center mb-6">
+            <div className="flex justify-center items-center mb-4">
               <h3 className="text-xl font-bold leading-none text-gray-900 dark:text-white">
                 USER DETAILS
               </h3>
@@ -127,14 +127,14 @@ export default function Home() {
               {
                userProfile.username === ""?
                <>
-              <div className="text-center p-6 bg-gray-800 border-b">
+              <div className="text-center p-6 bg-[#064e3b] border-b">
                <h1 className="pt-2 text-lg  text-gray-50">Please select user to see their profile!</h1>
                </div>
                </>
                :
                <>
-               <div className="bg-white rounded overflow-hidden shadow-lg">
-                <div className="text-center p-6 bg-gray-800 border-b">
+               <div className="bg-[#a7f3d0] rounded overflow-hidden scrollbar:bg-transparent scrollbar-track:!bg-slate-100 ">
+                <div className="text-center p-6 bg-[#064e3b] border-b">
                   <div className="item-center justify-center flex">
                   <Image
                   className="rounded-full"
@@ -156,7 +156,7 @@ export default function Home() {
                 </div>
                 <div className="border-b">
                   <div>
-                    <div className="px-6 py-4 hover:bg-gray-100 flex">
+                    <div className="px-6 py-4 flex">
                       <div className="text-green-600">
                         <svg
                           fill="none"
@@ -171,7 +171,7 @@ export default function Home() {
                         </svg>
                       </div>
                       <div className="pl-3">
-                      <p className="text-sm text-gray-500">Full Name</p>
+                      <p className="text-sm text-gray-800">Full Name</p>
                         <p className="text-lg font-medium text-gray-800 leading-none">
                           {userProfile.firstname} {userProfile.lastname}
                         </p>
@@ -181,7 +181,7 @@ export default function Home() {
                   </div>
 
                   <div>
-                    <div className="px-6 py-4 hover:bg-gray-100 flex">
+                    <div className="px-6 py-4  flex">
                       <div className="text-green-600">
                         <svg
                           fill="none"
@@ -196,7 +196,7 @@ export default function Home() {
                         </svg>
                       </div>
                       <div className="pl-3">
-                        <p className="text-sm text-gray-500">Job Title</p>
+                        <p className="text-sm text-gray-800">Job Title</p>
                         <p className="text-lg font-medium text-gray-800 leading-none">
                         {userProfile.jobtitle}
                         </p>
