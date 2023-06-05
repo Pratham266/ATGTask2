@@ -215,7 +215,6 @@ export default function Home() {
     );
   } 
   else {
-    console.log("loading......")
     return (<>
       <Loader/>
     </>);
